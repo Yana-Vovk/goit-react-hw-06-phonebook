@@ -1,0 +1,36 @@
+.Container {
+  margin: 0px 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ContainerHeading {
+  font-weight: 600;
+  font-size: 40px;
+  margin: 15px 0px;
+}
+
+.boxFrame {
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  border-style: solid;
+
+  padding: 10px;
+}
+
+.delBtn {
+  margin-left: auto;
+}
+
+.liItem {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.ulContainer {
+  padding-left: 0;
+}
+
+.spaceBetween {
+  margin-right: 15px;
+}
