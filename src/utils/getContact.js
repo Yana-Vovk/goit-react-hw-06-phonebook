@@ -1,4 +1,3 @@
-
 const getContact = (value, contacts) => {   
     const normalizetext = value.toLowerCase();
       

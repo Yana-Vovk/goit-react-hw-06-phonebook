@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import styles from '../Styles.module.css';
 
 function ContactForm({onSubmit}) {
-    const [name, setName] = useState('');
+    const [stateName, setName] = useState('');
     const [number, setNumber] = useState('');
 
     const handleChange = e => {
-        const { name, value } = e.currentTarget;
+        const { name, value } = e.target;
 
         switch (name) {
             case 'name':
@@ -33,7 +33,7 @@ function ContactForm({onSubmit}) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        onSubmit ( { name, number } );
+        onSubmit ( { stateName, number } );
         reset();
     }
 
@@ -46,7 +46,7 @@ function ContactForm({onSubmit}) {
                         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                         title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
                         required
-                        value={name}
+                        value={stateName}
                         onChange={handleChange}
                     />
                 </label><br />
@@ -61,14 +61,14 @@ function ContactForm({onSubmit}) {
                         onChange={handleChange}
                     />
                 </label> <br />
-                <button type="submit">Add contact</button>
+                <button type="submit" onSubmit={reset}>Add contact</button>
             </form>
         );
 }
     
  
 ContactForm.propTypes = {
-    name:PropTypes.string,
+    stateName:PropTypes.string,
     number:PropTypes.string,
 }
 

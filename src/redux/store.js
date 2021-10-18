@@ -12,7 +12,7 @@ import {
     REGISTER
 } from 'redux-persist';
 import logger from 'redux-logger';
-import storage from 'redux-persist/lib/storage';// defaults to localStorage for web
+import storage from 'redux-persist/lib/storage';
 
 const contactPersistConfig = {
     key: 'contacts',
